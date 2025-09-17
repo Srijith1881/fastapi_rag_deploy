@@ -74,6 +74,7 @@ jobs:
 
             # 🔑 Inject Gemini API key into .env
             echo "GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }}" > /home/ubuntu/.env
+            echo "LANGSMITH_API_KEY=${{ secrets.LANGSMITH_API_KEY }}" > /home/ubuntu/.env
 
             # Run the container with .env file
             docker run -d --env-file /home/ubuntu/.env -p 8000:8000 --name rag-container 084828568681.dkr.ecr.ap-south-1.amazonaws.com/fastapi_rag:latest
