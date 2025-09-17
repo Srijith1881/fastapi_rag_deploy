@@ -8,7 +8,7 @@ on:
 jobs:
   # CI - Build and Push to ECR
   build_and_push:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       # Step 1: Checkout Code
